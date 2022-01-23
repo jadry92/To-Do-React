@@ -1,9 +1,8 @@
 import React from 'react'
 import './styles/ToDoSearch.css'
-import {useState} from 'react'
 
-function ToDoSearch() {
-  const [search, setSearch] = useState('Cebolla')
+
+function ToDoSearch({search, setSearch}) {
 
   const handelSearchChange = (e) => {
     setSearch(e.target.value)

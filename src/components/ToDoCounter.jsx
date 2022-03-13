@@ -2,13 +2,13 @@ import React from 'react'
 
 import './styles/ToDoCounter.css'
 
-function ToDoCounter() {
+function ToDoCounter({totalToDos, completedToDos}) {
 
 
   return (
     <div>
       <h3 className="TodoCounter" >
-        You have complete {}/{} Tasks 
+        You have complete {completedToDos}/{totalToDos} Tasks 
       </h3>
 
       <h1 className="TodoCounter">

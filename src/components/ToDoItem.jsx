@@ -2,24 +2,24 @@ import React from 'react'
 import './styles/ToDoItem.css'
 
 
-function ToDoItem(props) {
+function ToDoItem({text, completed, onComplete, onDelete}) {
   const handelCompleted = (e) => {
-    console.log('done')
+    onComplete(text)
   }
 
   const handelDelete = (e) => {
-    console.log('delete')
+    onDelete(text)
   }
 
   return (
     <li className="TodoItem">
       <span 
       onClick={handelCompleted}
-      className={`Icon Icon-check ${props.completed && 'Icon-check--active'}`}>
+      className={`Icon Icon-check ${completed && 'Icon-check--active'}`}>
         √
       </span>
-      <p className={`TodoItem-p ${props.completed && 'TodoItem-p--complete'}`}>
-        {props.text}
+      <p className={`TodoItem-p ${completed && 'TodoItem-p--complete'}`}>
+        {text}
       </p>
       <span 
       onClick={handelDelete}

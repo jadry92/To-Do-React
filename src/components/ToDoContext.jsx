@@ -15,18 +15,27 @@ function ToDoProvider(props) {
   const [openModal, setOpenModal] = useState(false)
   const [search, setSearch] = useState('')
 
+  const addToDo = (text) => {
+    const newToDos = [...toDos]
+    newToDos.push({
+      completed:false,
+      text
+    })
+    saveToDos(newToDos)
+  }
+
   const completeToDo = (text) => {
     const toDoIndex = toDos.findIndex( toDo => toDo.text === text)
-    const oldToDos = [...toDos]
-    oldToDos[toDoIndex].completed = !toDos[toDoIndex].completed
-    saveToDos(oldToDos)
+    const newToDos = [...toDos]
+    newToDos[toDoIndex].completed = !toDos[toDoIndex].completed
+    saveToDos(newToDos)
   }
 
   const deleteToDo = (text) => {
     const toDoIndex = toDos.findIndex( toDo => toDo.text === text)
-    const oldToDos = [...toDos]
-    oldToDos.splice(toDoIndex,1)
-    saveToDos(oldToDos)
+    const newToDos = [...toDos]
+    newToDos.splice(toDoIndex,1)
+    saveToDos(newToDos)
   }
 
   const completedToDos = toDos.filter(toDo => toDo.completed).length
@@ -57,6 +66,7 @@ function ToDoProvider(props) {
       deleteToDo,
       openModal,
       setOpenModal,
+      addToDo
     }}>
       {props.children}
     </ToDoContext.Provider>

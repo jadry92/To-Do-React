@@ -8,6 +8,7 @@ import CreateToDoButton from "./components/CreateToDoButton";
 import ToDoItem from "./components/ToDoItem";
 import { ToDoContext } from "./components/ToDoContext";
 import AddToDoModal from './components/AddToDoModal'
+import AddToDoForm from "./components/AddToDoForm";
 //import './App.css'
 
 
@@ -46,7 +47,7 @@ function AppUI() {
         ))}
       </ToDoList>
 
-      {openModal && <AddToDoModal> <p>dasdasdas</p> </AddToDoModal>}
+      {openModal && <AddToDoModal> <AddToDoForm/> </AddToDoModal>}
 
       <CreateToDoButton/>
     </React.Fragment>

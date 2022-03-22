@@ -33,8 +33,9 @@ function AppUI() {
       <ToDoList >
         {error && <p>Ups!! there is an error</p>}
         {loading && <p> ... ... ... ... ...</p>}
-        {(!loading && !totalToDos) && <p>Add the first ToDo!</p>}
-        {(!loading && !searchedToDos.length) && <p>No To Do find with "{search}"</p>}
+        {(!loading && !totalToDos) && <p>Add the first ToDo!</p> } 
+        {(!loading && search && !searchedToDos.length) && <p>No To Do find with "{search}"</p>}
+
 
         {searchedToDos.map((item) => (
           <ToDoItem 

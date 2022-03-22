@@ -1,20 +1,23 @@
 # To Do Machine
 
-This app is created on React js and use the basic functionalities such as (useState, useEffect, useContext). You can try this app on ()[]
+This app is created on React js and use the basic functionalities such as (useState, useEffect, useContext). You can try this app on [https://jadry92.github.io/To-Do-React/](https://jadry92.github.io/To-Do-React/)
 
-## Available Scripts
+### Building the app locally
 
-In the project directory, you can run:
+Open the termian an run the commands:
 
-### `npm start`
+```bash
+git clone git@github.com:jadry92/To-Do-React.git
+npm install .
+npm run start
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The app will run in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### `npm run build`
+To build for deployment use the command:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+npm run build
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+this builds the app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance.
